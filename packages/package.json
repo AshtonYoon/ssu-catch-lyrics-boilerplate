@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "create ssu-catch-lyrics",
   "bin": {
-    "ssu-catch-lyrics": "./bin/generator.js"
+    "ssu-catch-lyrics": "bin/generator.js"
   },
   "private": false,
   "keywords": [
