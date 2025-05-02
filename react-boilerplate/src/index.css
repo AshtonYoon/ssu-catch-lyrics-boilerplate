@@ -61,6 +61,10 @@ input.letter {
 .score {
   font-size: 4rem;
   font-weight: 700;
+  padding: 80px 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: #434343;
 }
 
 .btn-hover {
@@ -126,5 +130,9 @@ input.letter {
 
   input.letter {
     border-bottom: 2px solid black;
+  }
+
+  .score {
+    background-color: #f2f2f2;
   }
 }
