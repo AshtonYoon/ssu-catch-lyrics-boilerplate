@@ -1,12 +1,12 @@
-import React, { memo } from 'react';
+import React from 'react';
 import "../AudioPlayer.css"
 
 const AudioPlayer: React.FC = () => {
   return (
     <audio controls>
-      <source src="./sample.mp3" type="audio/mpeg" />
+      <source type="audio/mpeg" />
     </audio>
   );
 };
 
-export default memo(AudioPlayer); 
+export default AudioPlayer; 
