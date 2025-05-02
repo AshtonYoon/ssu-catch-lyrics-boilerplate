@@ -1,6 +1,6 @@
 {
   "name": "ssu-catch-lyrics",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "create ssu-catch-lyrics",
   "bin": {
     "ssu-catch-lyrics": "bin/generator.js"
