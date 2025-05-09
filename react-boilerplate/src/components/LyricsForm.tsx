@@ -1,14 +1,14 @@
 import React from 'react';
 import LyricsField from './LyricsField';
 
-interface LyricsInputProps {
+interface LyricsFormProps {
   lyrics: string;
   values: string[];
   onValueChange: (index: number, value: string) => void;
   onSubmit: () => void;
 }
 
-const LyricsInput: React.FC<LyricsInputProps> = ({ lyrics, values, onValueChange, onSubmit }) => {
+const LyricsForm: React.FC<LyricsFormProps> = ({ lyrics, values, onValueChange, onSubmit }) => {
   return (
     <>
       <LyricsField
@@ -23,4 +23,4 @@ const LyricsInput: React.FC<LyricsInputProps> = ({ lyrics, values, onValueChange
   );
 };
 
-export default LyricsInput; 
+export default LyricsForm; 
