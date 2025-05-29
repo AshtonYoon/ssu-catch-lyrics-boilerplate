@@ -36,7 +36,7 @@ h1 {
   line-height: 1.1;
 }
 
-input.letter {
+.letter {
   width: 30px;
   height: 60px;
   outline: none;
@@ -63,7 +63,7 @@ input.letter {
   font-weight: 700;
   padding: 80px 40px;
   border-radius: 20px;
-  margin-top: 20px;
+  margin: 20px 10px;
   background-color: #434343;
 }
 
@@ -81,10 +81,10 @@ input.letter {
   border: none;
   background-size: 300% 100%;
   border-radius: 50px;
-  moz-transition: all .15s ease-in-out;
-  -o-transition: all .15s ease-in-out;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
+  moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   position: fixed;
   bottom: 40px;
   left: 50%;
@@ -93,10 +93,10 @@ input.letter {
 
 .btn-hover:hover {
   background-position: 100% 0;
-  moz-transition: all .15s ease-in-out;
-  -o-transition: all .15s ease-in-out;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
+  moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   transform: scale(1.05);
 }
 
@@ -105,12 +105,24 @@ input.letter {
 }
 
 .btn-hover.color-1 {
-  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  background-image: linear-gradient(
+    to right,
+    #fc6076,
+    #ff9a44,
+    #ef9d43,
+    #e75516
+  );
   box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }
 
 .btn-hover.color-2 {
-  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
@@ -128,11 +140,59 @@ input.letter {
     background-color: #f9f9f9;
   } */
 
-  input.letter {
+  .letter {
     border-bottom: 2px solid black;
   }
 
   .score {
     background-color: #f2f2f2;
   }
+}
+
+.textarea-container {
+  width: calc(100% - 20px);
+  height: 80px;
+  position: relative;
+  margin: 10px;
+}
+
+.textarea-container > textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  font-size: 2rem;
+  letter-spacing: 0;
+  word-spacing: 0;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.underline-container {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  pointer-events: none;
+}
+
+.letter-decoration {
+  border-bottom: 2px solid black;
+  height: 40px;
+}
+
+.pass {
+  border-bottom: 2px lightgreen black;
+}
+
+.fail {
+  border-bottom: 2px red black;
+}
+
+.space-decoration {
+  height: 32px;
 }

@@ -1,42 +1,19 @@
-import './App.css'
-import AudioPlayer from './components/AudioPlayer'
-import LyricsForm from './components/LyricsForm';
-import LyricsResult from './components/LyricsResult';
-import { useLyricsGame } from './hooks/useLyricsGame';
+import { useState } from "react";
+import "./App.css";
+import AudioPlayer from "./components/AudioPlayer.answer";
+import LyricsInput from "./components/LyricsInput.answer";
+import SubmitButton from "./components/SubmitButton.answer";
 
 function App() {
-  const {
-    lyrics,
-    values,
-    submitted,
-    score,
-    lengthWithoutSpace,
-    handleValueChange,
-    handleSubmit,
-    handleReset,
-  } = useLyricsGame();
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
       <AudioPlayer />
-      {!submitted ? (
-        <LyricsForm
-          lyrics={lyrics}
-          values={values}
-          onValueChange={handleValueChange}
-          onSubmit={handleSubmit}
-        />
-      ) : (
-        <LyricsResult
-          lyrics={lyrics}
-          values={values}
-          score={score}
-          totalLength={lengthWithoutSpace}
-          onReset={handleReset}
-        />
-      )}
+      <LyricsInput submitted={submitted} />
+      <SubmitButton submitted={submitted} setSubmitted={setSubmitted} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
