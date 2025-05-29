@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import AudioPlayer from "./components/AudioPlayer.answer";
-import LyricsInput from "./components/LyricsInput.answer";
-import SubmitButton from "./components/SubmitButton.answer";
+import AudioPlayer from "./components/AudioPlayer";
+import LyricsInput from "./components/LyricsInput";
+import SubmitButton from "./components/SubmitButton";
 
 function App() {
   const [submitted, setSubmitted] = useState(false);
